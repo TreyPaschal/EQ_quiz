@@ -5,6 +5,7 @@ import "./dashboard.css";
 import { auth, db, logout } from "./firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Test from './test';
 
 
 function Dashboard() {
@@ -49,7 +50,7 @@ function Dashboard() {
         <div>
           <p>Hello {name} <a onClick={logout}> Logout</a></p>
         </div>
-       
+       <Test></Test>
      </div>
   );
 }
