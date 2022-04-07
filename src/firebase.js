@@ -20,6 +20,7 @@ import {
 const firebaseConfig = {
     apiKey: "AIzaSyAi8p4N4nn4TFpmuv3DY6ukJiWu5hPZGxQ",
     authDomain: "eq-quiz-11d12.firebaseapp.com",
+    databaseURL: "https://eq-quiz-11d12.firebaseio.com",
     projectId: "eq-quiz-11d12",
     storageBucket: "eq-quiz-11d12.appspot.com",
     messagingSenderId: "270791982378",
@@ -93,4 +94,5 @@ export {
   registerWithEmailAndPassword,
   sendPasswordReset,
   logout,
+  collection
 };

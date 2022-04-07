@@ -4,6 +4,8 @@ import { useNavigate, Link } from "react-router-dom";
 import "./dashboard.css";
 import { auth, db, logout } from "./firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 function Dashboard() {
   const [user, loading] = useAuthState(auth);
@@ -26,19 +28,28 @@ function Dashboard() {
     fetchUserName();
   }, [user, loading]);
   return (
-    <div className="dashboard">
-       <div className="dashboard__container">
-        Logged in as
-         <div>{name}</div>
-         <div>{user?.email}</div>
-         <button className="dashboard__btn" onClick={logout}>
-          Logout
-         </button>
-         
-       </div>
-       <div>
-       <Link to="/test">Add</Link>
-       </div>
+    <div>
+      <div className="navbar navbar-expand navbar-dark bg-dark">
+          <a href="/tutorials" className="navbar-brand">
+            Nerdskool EQ
+          </a>
+          <div className="navbar-nav mr-auto">
+            <li className="nav-item">
+              <Link to={"/tutorials"} className="nav-link">
+                Link
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to={"/add"} className="nav-link">
+                Add
+              </Link>
+            </li>
+          </div>
+        </div>
+        <div>
+          <p>Hello {name} <a onClick={logout}> Logout</a></p>
+        </div>
+       
      </div>
   );
 }
