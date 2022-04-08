@@ -1,13 +1,11 @@
 import React, { Component } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes, Switch, Link } from "react-router-dom";
-import Login from "./login";
-import Register from "./register";
-import Reset from "./reset";
-import Dashboard from "./dashboard";
-import MyComponent from "./test";
-
-//import Add from "./add";
+import Login from "./components/auth/login";
+import Register from "./components/auth/register";
+import Reset from "./components/auth/reset";
+import Dashboard from "./components/dashboard/dashboard";
+import MyComponent from "./components/test/test";
 
 function App() {
   return (

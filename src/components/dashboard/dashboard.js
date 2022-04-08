@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate, Link } from "react-router-dom";
 import "./dashboard.css";
-import { auth, db, logout } from "./firebase";
+import { auth, db, logout } from "./../../firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Test from './test';
+import Test from './../test/test';
 
 
 function Dashboard() {
