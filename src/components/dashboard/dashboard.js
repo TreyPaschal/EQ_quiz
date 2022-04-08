@@ -30,23 +30,6 @@ function Dashboard() {
   }, [user, loading]);
   return (
     <div>
-      <div className="navbar navbar-expand navbar-dark bg-dark">
-          <a href="/tutorials" className="navbar-brand">
-            Nerdskool EQ
-          </a>
-          <div className="navbar-nav mr-auto">
-            <li className="nav-item">
-              <Link to={"/tutorials"} className="nav-link">
-                Link
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to={"/add"} className="nav-link">
-                Add
-              </Link>
-            </li>
-          </div>
-        </div>
         <div>
           <p>Hello {name} <a onClick={logout}> Logout</a></p>
         </div>

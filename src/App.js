@@ -6,12 +6,14 @@ import Register from "./components/auth/register";
 import Reset from "./components/auth/reset";
 import Dashboard from "./components/dashboard/dashboard";
 import MyComponent from "./components/test/test";
+import NavBar from "./components/navbar/navbar";
 
 function App() {
   return (
     <div className="App">
-      
+     
       <Router>
+      <NavBar></NavBar>
         <Routes>
           <Route exact path="/" element={<Login />} />
           <Route exact path="/register" element={<Register />} />
